@@ -13,7 +13,7 @@ export default function Query() {
     setQuestion("");
 
     try {
-      const res = await axios.post("https://knowledge-based-search-engine.onrender.com", {
+      const res = await axios.post("https://knowledge-based-search-engine.onrender.com/query", {
         question,
       });
 
@@ -23,7 +23,7 @@ export default function Query() {
     } catch (err) {
       setMessages((prev) => [
         ...prev,
-        { role: "bot", text: "Error ❌" },
+        { role: "bot", text: `Error ❌ ${err}` },
       ]);
     }
   };
