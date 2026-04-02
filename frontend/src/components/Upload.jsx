@@ -9,7 +9,7 @@ export default function Upload() {
     formData.append("file", file);
 
     try {
-      await axios.post("https://knowledge-based-search-engine.onrender.com", formData);
+      await axios.post("https://knowledge-based-search-engine.onrender.com/upload", formData);
       setFiles((prev) => [...prev, file.name]);
     } catch {
       alert("Upload failed");
