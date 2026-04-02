@@ -11,7 +11,7 @@ const app = express();
 
 // ✅ Middleware
 app.use(cors({
-  origin: "https://knowledge-based-search-engine.onrender.com",
+  origin: "https://knowledge-based-search-engine.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
