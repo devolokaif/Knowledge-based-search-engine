@@ -10,7 +10,12 @@ const { queryDocs } = require("./services/query");
 const app = express();
 
 // ✅ Middleware
-app.use(cors());
+app.use(cors({
+  origin: "https://knowledge-based-search-engine.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // ✅ Multer setup
