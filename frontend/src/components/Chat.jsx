@@ -16,7 +16,7 @@ export default function Chat() {
     setInput("");
 
     try {
-      const res = await axios.post("https://knowledge-based-search-engine.onrender.com", {
+      const res = await axios.post("https://knowledge-based-search-engine.onrender.com/query", {
         question: input,
       });
 
